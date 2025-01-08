@@ -52,8 +52,8 @@ To analyze the cyclomatic complexity of your code using the Clang plugin, follow
 
 ## Install Instructions
 
-    To check the cyclomatic complexity of a c++ program, you can just install the debian package, instead of following the run instructions.
-    Here is the complete guide to install the package.
+To check the cyclomatic complexity of a c++ program, you can just install the debian package, instead of following the run instructions.
+Here is the complete guide to install the package.
 
 1. Download the cc-analyzer.deb package from the repository
 
