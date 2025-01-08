@@ -1,0 +1,8 @@
+digraph CFG {
+  Block0 [label="Block 0\n"]
+  Block1 [label="Block 1\n0\nreturn 0;
+\n"]
+  Block1 -> Block0
+  Block2 [label="Block 2\n"]
+  Block2 -> Block1
+}
