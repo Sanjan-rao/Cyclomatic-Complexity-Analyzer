@@ -23,7 +23,7 @@ To analyze the cyclomatic complexity of your code using the Clang plugin, follow
    The plugin takes a C++ source file as input and generates a report with the cyclomatic complexity values for each function in the code.
 
    ```bash
-   clang -cc1 -load ./libcyclomatic_complexity.so -plugin cyclomatic-complexity ../test/test.cpp
+   clang-18 -cc1 -load ./libcyclomatic_complexity.so -plugin cyclomatic-complexity ../test/test.cpp
    ```
 
 2. Visualize the control flow graph (CFG):
@@ -32,6 +32,55 @@ To analyze the cyclomatic complexity of your code using the Clang plugin, follow
    ```bash
    dot -Tpng complexFunction_cfg.dot -o complexFunction_cfg.png
    ```
+
+3. Add a command line tool (optional) 
+
+    This cli tool can be used anywhere across your system to find the cyclomatic complexity of a given c++ file.
+
+    Inside the cc-analyzer file, replace /path/to/libcyclomatic_complexity.so with the actual path to your compiled plugin.
+    Now run the following commands to create the cli tool command.
+
+    ```bash
+    chmod +x cc-analyzer
+    sudo mv cc-analyzer /usr/local/bin/
+    ```
+    To find the cyclomatic complexity of any c++ file, replace the following command with your c++ file name.
+
+    ```bash
+    cc-analyzer <your-file-name>
+    ```
+
+## Install Instructions
+
+    To check the cyclomatic complexity of a c++ program, you can just install the debian package, instead of following the run instructions.
+    Here is the complete guide to install the package.
+
+1. Download the cc-analyzer.deb package from the repository
+
+2. Run the following installation command in the directory containing the downloaded debian package.
+
+    ```bash
+    sudo dpkg -i cc-analyzer.deb
+    ```
+
+3. Provide the execution access to the file.
+
+    ```bash
+    cd /usr/local/bin
+    chmod +x cc-analyzer
+    ```
+
+4. Test the cyclomatic complexity of any c++ file by replacing your file name.
+
+    ```bash
+    cc-analyzer <your-file-name>
+    ```
+
+5. To uninstall the package from your system.
+
+    ```bash
+    sudo apt remove cc-analyzer
+    ```
 
 ### Notes:
 

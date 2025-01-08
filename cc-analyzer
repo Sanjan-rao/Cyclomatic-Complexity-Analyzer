@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Ensure a file name is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: cc-analyzer <filename>"
+    exit 1
+fi
+
+# File to analyze
+INPUT_FILE=$1
+
+# Path to your plugin
+PLUGIN_PATH=/path/to/libcyclomatic_complexity.so
+
+# Run clang with the plugin
+clang -cc1 -load $PLUGIN_PATH -plugin cyclomatic-complexity $INPUT_FILE
+EXIT_CODE=$?
+
+# Check if clang executed successfully
+if [ $EXIT_CODE -ne 0 ]; then
+    echo "Error: Analysis failed. Ensure the input file is valid."
+    exit $EXIT_CODE
+fi
