@@ -1,2 +1,0 @@
-Function: complexFunction, Cyclomatic Complexity: 62
-Function: main, Cyclomatic Complexity: 3
