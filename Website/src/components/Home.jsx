@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
+import {Link} from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -32,9 +33,11 @@ const HomePage = () => {
               code that is difficult to test and maintain. The lower the
               cyclomatic complexity, the better the code quality.
             </p>
-            <Button href="/cc-complexity" variant="primary">
+            <Link to = "/cc-complexity">
+            <Button variant="primary">
               Learn More
             </Button>
+            </Link>
           </Col>
         </Row>
 
@@ -46,9 +49,11 @@ const HomePage = () => {
               Start analyzing your code's cyclomatic complexity today.
               Download the tool and enhance your code quality.
             </p>
-            <Button href="/download" variant="success" size="lg">
+            <Link to = "/download" >
+            <Button variant="success" size="lg">
               Download Now
             </Button>
+            </Link>
           </Col>
         </Row>
 
