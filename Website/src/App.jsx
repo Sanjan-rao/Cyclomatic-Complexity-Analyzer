@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import CyclomaticComplexity from './components/CyclomaticComplexity'
 import DownloadPage from './components/DownloadPage';
 
-function App() {
+const App = () => {
 
   return (
     <>
@@ -11,11 +11,10 @@ function App() {
         <div>
           <Routes>
             <Route path='/' element={<Navbar />} />
-            <Route path='/cc-complexity' element={<><Navbar /><CyclomaticComplexity /></>} />
-            <Route path='/download' element={<><Navbar /><DownloadPage /></>} />
+            <Route path='/cc-complexity' element={<><Navbar/><CyclomaticComplexity/></>} />
+            <Route path='/download' element={<><Navbar/><DownloadPage/></>} />
           </Routes>
         </div>
-
       </Router>
     </>
   )

@@ -74,6 +74,6 @@ const DownloadPage = () => {
       </Row>
     </Container>
   );
-}
+};
 
 export default DownloadPage;

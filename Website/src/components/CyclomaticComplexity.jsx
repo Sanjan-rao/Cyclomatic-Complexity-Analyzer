@@ -118,6 +118,6 @@ const CyclomaticComplexity = () => {
       </Row>
     </Container>
   );
-}
+};
 
 export default CyclomaticComplexity;
