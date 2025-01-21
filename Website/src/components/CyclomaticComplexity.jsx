@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-function CyclomaticComplexity() {
+const CyclomaticComplexity = () => {
   return (
     <Container className="my-5">
       <Row>

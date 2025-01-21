@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 
-function DownloadPage() {
+const DownloadPage = () => {
   const handleDownload = () => {
-    // Update the file URL with your actual `.deb` package link
+    
     const fileUrl = "/cc-analyzer.deb";
     window.open(fileUrl, "_blank");
   };
