@@ -9,9 +9,9 @@ function App() {
     <> 
     <Router>
       <Routes>
-        <Route path='/' element={<Navbar/>}/>
-        <Route path='/cc-complexity' element={<><Navbar/><CyclomaticComplexity/></>}/>
-        <Route path='/download' element = {<><Navbar/><DownloadPage/></>} />
+        <Route path='https://cyclomatic-complexity-analyzer.onrender.com/' element={<Navbar/>}/>
+        <Route path='https://cyclomatic-complexity-analyzer.onrender.com/cc-complexity' element={<><Navbar/><CyclomaticComplexity/></>}/>
+        <Route path='https://cyclomatic-complexity-analyzer.onrender.com/download' element = {<><Navbar/><DownloadPage/></>} />
       </Routes>
     </Router>
     </>
