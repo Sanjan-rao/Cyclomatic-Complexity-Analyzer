@@ -6,14 +6,17 @@ import DownloadPage from './components/DownloadPage';
 function App() {
 
   return (
-    <> 
-    <Router>
-      <Routes>
-        <Route path='/' element={<Navbar/>}/>
-        <Route path='/cc-complexity' element={<><Navbar/><CyclomaticComplexity/></>}/>
-        <Route path='/download' element = {<><Navbar/><DownloadPage/></>} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <div>
+          <Routes>
+            <Route path='/' element={<Navbar />} />
+            <Route path='/cc-complexity' element={<><Navbar /><CyclomaticComplexity /></>} />
+            <Route path='/download' element={<><Navbar /><DownloadPage /></>} />
+          </Routes>
+        </div>
+
+      </Router>
     </>
   )
 }
